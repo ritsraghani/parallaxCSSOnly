@@ -13,10 +13,9 @@
     <div class="flex">
         <div>
             <input type="email" placeholder="Email Address" id="email" />
-            <button id="shake" onclick="shakeFunction()">
-                Submit
-            </button>
-        </div>
+            <button id="shake" onclick="shakeFunction()"> Submit </button>
+            <p>Enter id : abc@gmail.com</p>
+        </div>      
     </div>
 
     <script>
@@ -28,8 +27,10 @@
                     input.classList.add('active');
                 setTimeout(() => {
                     input.classList.remove('active');
-                }, 1200);
-            } 
+                }, 400);
+            } else{
+                alert('Email Id is correct');
+            }
         }
     </script>
 </body>

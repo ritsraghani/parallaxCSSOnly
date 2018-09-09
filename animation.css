@@ -1,15 +1,21 @@
 .active {
-  animation: shake 300ms 2 linear;
+  animation: shake 100ms 2 linear;
 }
 
 @keyframes shake {
   0% {
     transform: translate(6px, 0);
   }
-  25% {
+  15% {
     transform: translate(-6px, 0);
   }
+  25% {
+    transform: translate(6px, 0);
+  }
   50% {
+    transform: translate(-6px, 0);
+  }
+  60% {
     transform: translate(6px, 0);
   }
   75% {
@@ -63,3 +69,6 @@ button:hover {
   height: 350px;
 }
 
+p{
+    text-align: center;
+}
