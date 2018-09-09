@@ -14,7 +14,7 @@
         <div>
             <input type="email" placeholder="Email Address" id="email" />
             <button id="shake" onclick="shakeFunction()"> Submit </button>
-            <p>Enter id : abc@gmail.com</p>
+            <p class="errorMsg"></p>
         </div>      
     </div>
 
@@ -22,14 +22,15 @@
         function shakeFunction() {
             var input = document.getElementById('email');
             var emailId = input.value;
-
-            if(emailId != 'abc@gmail.com'){
+            var regex = RegExp('^[a-z0-9\.]+\@{1}[a-z]+\.[a-z]{2,3}$')
+            // console.log(regex, emailId, regex.test(String(emailId)));
+            if(!regex.test(String(emailId))) {
                     input.classList.add('active');
                 setTimeout(() => {
                     input.classList.remove('active');
                 }, 400);
             } else{
-                alert('Email Id is correct');
+                alert('Email id entered is valid')
             }
         }
     </script>
